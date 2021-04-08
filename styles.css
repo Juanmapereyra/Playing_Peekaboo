@@ -1,0 +1,51 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(
+      90deg,
+      rgba(48, 16, 255, 1) 0%,
+      rgb(100, 255, 196) 100%
+    );
+    background-size: 400%;
+
+    animation: gradient 10s ease-in-out infinite;
+}
+
+.emoji {
+    font-size: 15rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.closed {
+    display: none;
+}
+
+.open {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
